@@ -23,6 +23,31 @@ Xây dựng một hệ thống có khả năng:
 ### 2.1. Sơ đồ hoạt động
 ```mermaid
 flowchart TD
+    A["BƯỚC 1 – USER INPUT<br/>Tiếp nhận yêu cầu và dữ liệu từ sinh viên"]
+    B["BƯỚC 2 – INPUT VALIDATION<br/>Kiểm tra định dạng, chuẩn hóa và xử lý dữ liệu lỗi"]
+    C["BƯỚC 3 – PROMPT INJECTION DEFENSE<br/>Phân tích nội dung đáng ngờ, tách dữ liệu không đáng tin cậy"]
+    D["BƯỚC 4 – PROMPT LIBRARY<br/>Tìm Prompt phù hợp với loại yêu cầu"]
+    E["BƯỚC 5 – CUSTOM INSTRUCTIONS<br/>Kết hợp vai trò, quy tắc và phong cách phản hồi"]
+    F["BƯỚC 6 – AI EXECUTION<br/>Thực thi Prompt và tạo câu trả lời"]
+    G["BƯỚC 7 – OUTPUT VALIDATION<br/>Kiểm tra kết quả và xuất đầu ra cuối cùng"]
+
+    A --> B --> C --> D --> E --> F --> G
+
+    classDef blue fill:#E7EEFC,stroke:none,color:#111;
+    classDef teal fill:#E4F2F0,stroke:none,color:#111;
+    classDef orange fill:#F8EFE5,stroke:none,color:#111;
+    classDef purple fill:#F0E8FA,stroke:none,color:#111;
+    classDef green fill:#E5F3EA,stroke:none,color:#111;
+    classDef gray fill:#ECEFF1,stroke:none,color:#111;
+
+    class A blue
+    class B,E teal
+    class C orange
+    class D purple
+    class F green
+    class G gray
+
+    linkStyle default stroke:#777,stroke-width:2px;
 ```
 ### 2.2. Chức năng từng thành phần
 |Thành phần|	Chức năng|
